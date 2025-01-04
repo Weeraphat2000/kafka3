@@ -57,6 +57,7 @@ export class AppController {
 
   @MessagePattern('getAllCat')
   async getAllCat() {
+    log('getAllCat');
     return {
       cats: await this.catModel.find().exec(),
       message: 'Get all cat',
